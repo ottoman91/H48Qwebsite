@@ -1,0 +1,33 @@
+<HTML>
+<HEAD>
+	<meta http-equiv=Content-Type content="text/html;  charset=ISO-8859-1">
+	<TITLE>SouthAfricav6</TITLE>
+</HEAD>
+<BODY>
+	<SCRIPT>
+		var InternetExplorer = navigator.appName.indexOf("Microsoft") != -1;
+		
+		// Handle all the the FSCommand messages in a Flash movie
+		function SouthAfricav6_DoFSCommand(command, args) {
+		  var SouthAfricav6Obj = InternetExplorer ? SouthAfricav6 : document.SouthAfricav6;
+	
+		}
+		// Hook for Internet Explorer 
+		if (navigator.appName && navigator.appName.indexOf("Microsoft") != -1 && 
+			  navigator.userAgent.indexOf("Windows") != -1 && navigator.userAgent.indexOf("Windows 3.1") == -1) {
+			document.write('<SCRIPT LANGUAGE=VBScript\> \n');
+			document.write('on error resume next \n');
+			document.write('Sub SouthAfricav6_FSCommand(ByVal command, ByVal args)\n');
+			document.write('  call SouthAfricav6_DoFSCommand(command, args)\n');
+			document.write('end sub\n');
+			document.write('</SCRIPT\> \n');
+		}
+	</SCRIPT>
+	
+	<A HREF=FSCommand:quit></A> 
+	<OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+	 codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" ID="SouthAfricav6" WIDTH="100%" HEIGHT="100%" ALIGN="">
+	 	<PARAM NAME=movie VALUE="SouthAfricav6.swf"> <PARAM NAME=quality VALUE=high> <PARAM NAME=wmode VALUE=opaque> <PARAM NAME=bgcolor VALUE=#FFFFFF> <EMBED src="SouthAfricav6.swf" quality=high wmode=opaque bgcolor=#FFFFFF  WIDTH="100%" HEIGHT="100%" swLiveConnect=true ID="SouthAfricav6" NAME="SouthAfricav6" ALIGN="" TYPE="application/x-shockwave-flash" PLUGINSPAGE="http://www.macromedia.com/go/getflashplayer"></EMBED>
+	</OBJECT>
+</BODY>
+</HTML>

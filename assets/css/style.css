@@ -1,0 +1,158 @@
+/*!
+ * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/template-overviews/simple-sidebar)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-simple-sidebar/blob/master/LICENSE)
+ */
+
+/*These should be the only styling values you may want to change*/
+:root {
+
+  /*Sets width of the sidebar*/
+  --sidebar-width: 200px;
+
+  /*Sets background color of the sidebar*/
+  --sidebar-bg-color: #020166;
+
+  /*The hover color on sidebar and text color on buttons*/
+  --sidebar-bg-hover-color: #3d3e40;
+
+  /*The selected color on sidebar and hover on buttons*/
+  --sidebar-bg-selected-color: #c8a60ad6;
+
+  /*The text color on sidebar*/
+  --sidebar-text-color: #e7e7e7;
+
+  /*The selected/hover color on sidebar and text color on buttons*/
+  --sidebar-text-selected-color: #ffffff;
+
+  /*Brand Background*/
+  --sidebar-brand-bg: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("../images/political/flag.png");
+}
+
+/*Wrapper*/
+#wrapper {
+  padding-left: var(--sidebar-width);
+}
+
+/*Page Content Styles*/
+#page-content-wrapper {
+  position: relative;
+  padding: 15px;
+  margin-right: 0;
+  overflow-x: scroll;
+  min-width: 400px;
+  width: 100%;
+  min-height: 100%;
+}
+
+.section {
+  display: none;
+  padding-bottom: 20px;
+  transition: top .5s;
+  min-height: 100%;
+}
+
+.section.show {
+  opacity: 1;
+}
+
+/* Sidebar Styles */
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  left: 0px;
+  height: 100%;
+  width: var(--sidebar-width);
+  overflow-y: scroll;
+  background: var(--sidebar-bg-color);
+}
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  width: var(--sidebar-width);
+  list-style-type: none;
+}
+
+.sidebar-nav li {
+  text-indent: 20px;
+  line-height: 35px;
+  color: var(--sidebar-text-color);
+}
+
+.sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color: var(--sidebar-text-color);
+}
+
+.sidebar-nav li a:hover {
+  color: var(--sidebar-text-selected-color);
+  background: var(--sidebar-bg-hover-color); 
+}
+
+a.section-link.selected {
+  color: var(--sidebar-text-selected-color);
+  background: var(--sidebar-bg-selected-color);
+  pointer-events: none;
+  cursor: default;
+}
+
+/*Branding*/
+.sidebar-nav>.sidebar-brand {
+  height: 65px;
+  font-size: 17px;
+  padding-bottom: 20px;
+  line-height: 60px;
+  font-weight: bolder;
+}
+
+.sidebar-nav>.sidebar-brand a {
+  color: var(--sidebar-text-selected-color);
+  background-image: var(--sidebar-brand-bg);
+  pointer-events: auto;
+}
+
+.sidebar-nav>.sidebar-brand a:hover {
+  color: var(--sidebar-text-selected-color);
+  background-image: var(--sidebar-brand-bg);
+}
+
+a.section-link.selected>.sidebar-brand.selected a {
+  color: var(--sidebar-text-selected-color);
+  background-image: var(--sidebar-brand-bg);
+  pointer-events: none;
+  cursor: default;
+}
+
+
+/*Buttons*/
+.btn {
+  background: transparent;
+  color: var(--sidebar-bg-hover-color);
+}
+
+.btn:hover {
+  color: var(--sidebar-text-selected-color);
+  background: var(--sidebar-bg-selected-color);
+}
+
+/*Lists*/
+ul {
+    list-style-type: none;
+}
+
+/*iframes*/
+.rssfeed {
+  border-style:outset;
+  width: 100%;
+  height: 400px;
+}
+
+.full-page-frame {
+  border:none;
+  width: 100%;
+  height: 650px;
+}
